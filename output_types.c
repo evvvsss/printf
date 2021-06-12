@@ -41,7 +41,6 @@ unsigned long	output_x(va_list *list, struct s_definition *d, char **s)
 
 unsigned long	output_d(va_list *list, struct s_definition *d, char **s)
 {
-	unsigned long	u;
 	int				i;
 
 	i = va_arg(*list, int);

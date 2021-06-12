@@ -2,7 +2,6 @@
 
 char	*cut_str(char *s, int start, size_t len)
 {
-	char	*b;
 	size_t	i;
 
 	i = 0;
@@ -29,4 +28,10 @@ long	ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
+}
+
+void	write_char(char a, int *n)
+{
+	write(1, &a, 1);
+	(*n)++;
 }

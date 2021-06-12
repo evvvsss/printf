@@ -6,6 +6,7 @@ int	output(struct s_definition *d, va_list *list)
 	char			*s;
 
 	u = 0;
+	s = NULL;
 	if (d->type == 'd' || d->type == 'i')
 		u = output_d(list, d, &s);
 	else if (d->type == 'c')

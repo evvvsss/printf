@@ -6,10 +6,12 @@ SRCS		=  	ft_atoi.c 		\
 				ft_itoa_uint.c	\
 				ft_printf.c		\
 				ft_strdup.c		\
-				func.c			\
 				add_func.c 		\
 				output.c		\
 				output_types.c	\
+				display_d.c 	\
+				display_csp.c	\
+				check.c 		\
 
 INCLUDES	=	libftprintf.h
 
@@ -18,7 +20,7 @@ OBJS		= 	${SRCS:.c=.o}
 CC			= 	gcc
 RM			= 	rm -f
 
-# CFLAGS		= 	-Wall -Werror -Wextra 
+CFLAGS		= 	-Wall -Werror -Wextra 
 
 .c.o:
 				${CC} ${CFLAGS} -I ${INCLUDES} -c $< -o ${<:.c=.o}

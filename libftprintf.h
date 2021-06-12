@@ -18,7 +18,8 @@ int				ft_printf(const char *format, ...);
 void			struct_init(struct s_definition *d);
 int				check_precision(char *format,
 					struct s_definition *d, va_list *list);
-int				check_digit(char *format, struct s_definition *d, va_list *str);
+int				check_digit(char *format, struct s_definition *d,
+					va_list *str, int i);
 int				check_flag(char *format, struct s_definition *d);
 int				ft_atoi(const char *str);
 int				check_type(char *format, struct s_definition *d);
@@ -39,5 +40,17 @@ unsigned long	output_p(va_list *list, struct s_definition *d, char **s);
 unsigned long	output_x(va_list *list, struct s_definition *d, char **s);
 unsigned long	output_d(va_list *list, struct s_definition *d, char **s);
 unsigned long	output_u(va_list *list, struct s_definition *d, char **s);
+void			write_char(char a, int *n);
+int				display_s_precision(struct s_definition *d,
+					char **s, int *u, int *n);
+int				display_d_precision(struct s_definition *d,
+					char **s, long *u, int *n);
+int				display_d_zero(struct s_definition *d,
+					char **s, long *u, int *n);
+int				display_d_minus(struct s_definition *d, char **s, long *u);
+int				display_d_width(struct s_definition *d,
+					char **s, long *u, int *n);
+int				check_digit_star(char *f, struct s_definition *d,
+					va_list *list, int *i);
 
 #endif

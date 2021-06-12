@@ -42,6 +42,7 @@ char	*ft_itoa_six(unsigned long n)
 	n = n / 16;
 	return (d);
 }
+
 char	*ft_itoa_six_uppercase(unsigned long n)
 {
 	char	*d;
